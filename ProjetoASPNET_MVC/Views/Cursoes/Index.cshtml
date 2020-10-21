@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ProjetoASPNET_MVC.Models.Curso>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Criar Curso", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.idCurso }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.idCurso }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.idCurso })
+        </td>
+    </tr>
+}
+
+</table>
