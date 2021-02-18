@@ -1,2 +1,2 @@
 # ProjetoASPNETMVC
-Projeto para estudo do ASP.NET MVC
+Projeto para estudo CRUD ASP.NET MVC com API
